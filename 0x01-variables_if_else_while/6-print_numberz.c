@@ -1,9 +1,10 @@
 #include <unistd.h>
+#include <stdio.h>
 /*
 * main
 */int main(void)
 {
-char c;
+int c;
 c = '0';
 while (c <= '9')
 {
