@@ -1,10 +1,6 @@
 #include <unistd.h>
-/*
-*putchar
-*/int _putchar(char c)
-{
-return (write(1, &c, 1));
-}
+#include <stdio.h>
+
 /*
 * main f
 */int main(void)
@@ -13,9 +9,9 @@ char c;
 c = 'a';
 while (c <= 'z')
 {
-_putchar(c);
+putchar(c);
 c = c + 1;
 }
-_putchar('\n');
+putchar('\n');
 return (0);
 }
