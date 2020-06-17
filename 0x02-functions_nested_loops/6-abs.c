@@ -4,14 +4,8 @@
 */ int _abs(int r)
 {
 if (r < 0)
-{
 r = -r;
-}
-if (r > 0)
-{r = r;
-}
-if (r == 0)
-{ r = r;
-}
+else
+r = r;
 return (r);
 }
