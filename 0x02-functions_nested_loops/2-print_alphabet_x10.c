@@ -5,15 +5,16 @@
 {
 char c, d;
 c = 'a';
-d = '1';
+d = '0';
 while (d <= '9')
 {
 while (c <= 'z')
 {
- _putchar(c);
-c = c + 1;   
+_putchar(c);
+c++;
 }
-d = d + 1;
-}
+c = 'a';
+d++;
 _putchar('\n');
+}
 }

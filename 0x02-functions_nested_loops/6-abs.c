@@ -5,13 +5,13 @@
 {
 if (r < 0)
 {
-r = r * -1;
-_putchar(r); }
+r = -r;
+}
 if (r > 0)
 {r = r;
-_putchar(r); }
+}
 if (r == 0)
-{r = 0;
-_putchar(r); }
+{ r = r;
+}
 return (r);
 }
