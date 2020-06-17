@@ -1,6 +1,7 @@
 #include "holberton.h"
-
-void jack_bauer(void)
+/*
+* function to count every minute
+*/ void jack_bauer(void)
 {
 int h;
 int m;
