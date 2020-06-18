@@ -12,6 +12,10 @@ while (a <= 100)
 	{
 		printf("FizzBuzz ");
 	}
+	else if (a == 100)
+	{
+		printf("Buzz");
+	}
 	else if (a % 5 == 0)
 	{
 		printf("Buzz ");
