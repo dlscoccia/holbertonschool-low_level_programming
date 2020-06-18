@@ -23,8 +23,9 @@ else
 		}
 		b = 0;
 		a++;
-		_putchar(92);
+		_putchar('\\');
 		_putchar('\n');
 	}
+	_putchar('\n');
 }
 }
