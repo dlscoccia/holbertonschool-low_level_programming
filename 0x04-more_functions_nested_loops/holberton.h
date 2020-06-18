@@ -1,3 +1,5 @@
+void print_triangle(int size);
+void print_square(int size);
 #include <stdio.h>
 int _isupper(int c);
 int _putchar(char c);
