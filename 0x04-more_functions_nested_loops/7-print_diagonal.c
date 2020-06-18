@@ -16,7 +16,7 @@ else
 {
 	while (a < n)
 	{
-		while (b <= a)
+		while (b < a)
 		{
 			_putchar(' ');
 			b++;
@@ -26,6 +26,5 @@ else
 		_putchar('\\');
 		_putchar('\n');
 	}
-	_putchar('\n');
 }
 }
