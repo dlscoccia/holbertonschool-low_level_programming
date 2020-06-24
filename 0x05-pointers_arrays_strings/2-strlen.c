@@ -2,15 +2,15 @@
 /*
  * counts chars on a string
  */ int _strlen(char *s)
- {
-	 int a;
-	 int NULL = NULL;
+{
+int a;
+int NULL = NULL;
 
-	 a = 0;
-	 while (*s != NULL)
-	 {
-		 a++;
-		 s++;
-	 }
-	 return(a);
- }
+a = 0;
+while (*s != NULL)
+{
+a++;
+s++;
+}
+return (a);
+}
