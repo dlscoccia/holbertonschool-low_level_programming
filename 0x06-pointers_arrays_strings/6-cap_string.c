@@ -1,4 +1,4 @@
-#include "holberton.h"
+48#include "holberton.h"
 /*
  * capitalaze every word of a string
  */ char *cap_string(char *p)
@@ -43,10 +43,10 @@ while (p[i] != '\0')
 	{
 		p[i + 1] = p[i + 1] - 32;
 	}
-/*	if ((p[i + 1] >= 'A' && p[i + 1] <= 'Z') && (p[i] == '"'))
+	if ((p[i + 1] >= 'A' && p[i + 1] <= 'Z') && (p[i] == '"'))
 	{
-		p[i + 1] = p[i +1];
-		} */
+		p[i + 1] = p[i + 1];
+	}
 	if ((p[i + 1] >= 'a' && p[i + 1] <= 'z') && (p[i] == ')'))
 	{
 		p[i + 1] = p[i + 1] - 32;
