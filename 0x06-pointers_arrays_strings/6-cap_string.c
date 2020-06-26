@@ -1,4 +1,4 @@
-48#include "holberton.h"
+#include "holberton.h"
 /*
  * capitalaze every word of a string
  */ char *cap_string(char *p)
