@@ -3,7 +3,7 @@
  * capitalaze every word of a string
  */ char *cap_string(char *p)
 {
-int i = 0;
+int i = 1;
 
 while (p[i] != '\0')
 {
