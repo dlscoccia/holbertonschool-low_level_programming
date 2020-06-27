@@ -16,11 +16,15 @@
 		while (c < 10)
 		{
 			r = l * c;
-			if (r == 0)
+			if (r == 0 && c == 0)
+			{
+				_putchar('0' + r);
+			}
+			if (r == 0 && c != 0)
 			{
 				_putchar(' ');
 				_putchar('0' + r);
-			}
+				}
 			if (r > 0 && r < 10)
 			{
 				_putchar(' ');
