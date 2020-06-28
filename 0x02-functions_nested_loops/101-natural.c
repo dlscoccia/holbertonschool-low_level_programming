@@ -1,5 +1,7 @@
 #include<stdio.h>
-int main(void)
+/*
+ * sum natural numbers divicibles of 3 and 5
+ */ int main(void)
 {
 	int i, sum = 0;
 
