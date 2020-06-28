@@ -27,8 +27,7 @@
 		y = n / 10;
 		x = y / 10;
 		_putchar('0' + x);
-		x = n - (x * 100);
-		x = x / 10;
+		x = y % 10;
 		_putchar('0' + x);
 		x = n % 10;
 		_putchar('0' + x);
