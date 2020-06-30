@@ -3,23 +3,21 @@
  * rot13
  */ char *rot13(char *s)
 {
-	char in[53] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-       char out[53] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
-	 int i = 0;
-	 int j = 0;
+	int i, j;
+	char in[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char out[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-	 while (s[i] != '\0')
-	 {
-		 j = 0;
-		 while (in[j] != '\0')
-		 {
-			 if (in[j] == s[i])
-			 {
-				 s[i] = out[j];
-			 }
-			 j++;
-		 }
-		 i++;
-	 }
-	 return (s);
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		for (j = 0; in[j] != '\0'; j++)
+		{
+			if (s[i] == in[j])
+			{
+				s[i] = out[j];
+				break;
+			}
+		}
+	}
+
+	return (s);
 }
