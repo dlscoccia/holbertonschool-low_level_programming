@@ -3,19 +3,22 @@
 *  function that gets the length of a prefix substring.
 */ unsigned int _strspn(char *s, char *accept)
 {
-int i, l = 0;
-unsigned int x = 0;
+int i, j, x = 0;
 
-while (s[i] != ' ' && s[i] != '\0')
+while (s[i] != '\0')
 {
-	l = 0;
-	while (accept[l] != '\0')
+	if (x != i)
 	{
-		if (accept[l] == s[i])
+		break;
+	}
+	j = 0;
+	while (accept[j] != '\0')
+	{
+		if (s[i] == accept[j])
 		{
 			x++;
 		}
-		l++;
+		j++;
 	}
 	i++;
 }
