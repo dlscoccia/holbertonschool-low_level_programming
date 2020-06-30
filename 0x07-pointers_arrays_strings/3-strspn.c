@@ -5,12 +5,8 @@
 {
 int i, j, x = 0;
 
-while (s[i] != '\0')
+while (s[i] != '\0' && x == i)
 {
-	if (x != i)
-	{
-		break;
-	}
 	j = 0;
 	while (accept[j] != '\0')
 	{
