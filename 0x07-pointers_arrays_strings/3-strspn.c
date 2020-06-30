@@ -1,22 +1,26 @@
 #include "holberton.h"
 /*
-*  function that gets the length of a prefix substring.
+* function that gets the length of a prefix substring.
 */ unsigned int _strspn(char *s, char *accept)
 {
-int i, j, x = 0;
+	unsigned int  x = 0, y = 0;
+	int i, j;
 
-while (s[i] != '\0' && x == i)
-{
-	j = 0;
-	while (accept[j] != '\0')
+	for (i = 0; s[i]; i++)
 	{
-		if (s[i] == accept[j])
+		for (j = 0; accept[j]; j++)
 		{
-			x++;
+			if (accept[j] == s[i])
+			{
+				x++;
+				break;
+			}
 		}
-		j++;
+		if (x == y)
+			break;
+		y = x;
+
 	}
-	i++;
-}
-return (x);
+	return (x);
+
 }
