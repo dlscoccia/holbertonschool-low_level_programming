@@ -1,32 +1,28 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
-
 /*
-* program that adds positive numbers
-*/ int main(int argc, char *argv[])
+ * program that adds positive numbers.
+ */ int main(int argc, char *argv[])
 {
-	int i, j = 0;
-	int res = 0;
+	int res, i = 0;
 
-	if (argc < 2)
+
+	while (--argc)
 	{
-		printf("0\n");
-		return (0);
-	}
-	for (i = 1; i < argc; i++)
-	{
-		if (isdigit(*argv[i]))
+		argv++;
+		for (i = 0; (*argv)[i]; i++)
 		{
-			j = atoi(argv[i]);
-			res = res + j;
+			if (!isdigit((*argv)[i]))
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
-		else
-		{
-			printf("Error\n");
-			return (1);
-		}
+		res = res + atoi(*argv);
+
 	}
 	printf("%d\n", res);
 	return (0);
+
 }
