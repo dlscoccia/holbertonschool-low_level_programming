@@ -12,13 +12,13 @@
 
 	if (size <= 0)
 	{ return ('\0'); }
-	else
-	{
-	letra = malloc(sizeof(char) * size);
-	for (; i < size; i++)
-	{
-		letra[i] = c;
-	}
-	return (letra);
-	}
+
+		letra = malloc(sizeof(char) * size);
+		if (letra == '\0')
+		{ return ('\0'); }
+		for (; i < size; i++)
+		{
+			letra[i] = c;
+		}
+		return (letra);
 }
