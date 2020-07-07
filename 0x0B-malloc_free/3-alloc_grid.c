@@ -6,10 +6,15 @@
 {
 int i = 0;
 int **grid;
-if (width <= 0 || height <= 0)
+if (width <= 0)
 {
 	return ('\0');
 }
+if (height <= 0)
+{
+	return ('\0');
+}
+
 grid = malloc(sizeof(int *) * width);
 
 for (; i < width; i++)
