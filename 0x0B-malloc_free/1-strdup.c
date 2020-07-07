@@ -8,20 +8,21 @@
 	char *str2;
 	int i, j = 0;
 
-	if (*str == '\0')
+	if (str == '\0')
 	{ return ('\0'); }
+
 	while (str[j] != '\0')
-	{
-		j++;
-	}
-	str2 = malloc(sizeof(char) * j);
+	{ j++; }
+
+	str2 = malloc(j * sizeof(char) + 1);
+
 	if (str2 == '\0')
 	{ return ('\0'); }
-	while (i < j)
+
+	for (i = 0 ; i < j; i++)
 	{
-		str2[i] = *str;
-		i++;
-		str++;
+		str2[i] = str[i];
 	}
+	str2[i] = '\0';
 	return (str2);
 }
