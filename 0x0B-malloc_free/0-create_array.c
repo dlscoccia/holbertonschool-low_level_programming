@@ -10,10 +10,15 @@
 	unsigned int i = 0;
 	char *letra;
 
+	if (size == 0)
+	{ return ('\0'); }
+	else
+	{
 	letra = malloc(sizeof(char) * size);
 	for (; i <= size; i++)
 	{
 		letra[i] = c;
 	}
 	return (letra);
+	}
 }
