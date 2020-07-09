@@ -9,22 +9,21 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *newmem;
-	unsigned int i = 0;
+	unsigned int i;
 
 	if (nmemb == 0 || size == 0) /* blocks or size cant be 0 */
 		return ('\0');
 
-	newmem = malloc(sizeof(size) * nmemb); /* number of blocks * size of blocks */
-
+	newmem = malloc(size * nmemb); /* number of blocks * size of blocks */
 	if (newmem == '\0')
 	{
 		free(newmem);
 		return ('\0'); /* if malloc fails */
 	}
 
-	for (; i < nmemb; i++)
+	for (i = 0; i < nmemb * size; i++)
 	{
-		*(newmem + i) = 0; /* setting new memmory with 0 */
+		newmem[i] = 0; /* setting new memmory with 0 */
 	}
 
 	return (newmem); /* pointer to memory allocated */
