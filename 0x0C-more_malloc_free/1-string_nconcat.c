@@ -11,16 +11,19 @@ int _strlen(char *s);
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *strcon;
-	int i, len1;
+	unsigned int i, len1;
 	unsigned int j, len2;
+
+	if (s1 == '\0')
+		s1 = "";
+	if (s2 == '\0')
+		s2 = "";
 
 	len1 = _strlen(s1); /* string1 length */
 	len2 = _strlen(s2); /* string2 length */
 
 	if (n >= len2)
 	{n = len2; } /* condition to copy entire s2 */
-	else
-		n = n;
 
 	strcon = malloc((len1 + n) * sizeof(char) + 1);
 	if (strcon == NULL)
