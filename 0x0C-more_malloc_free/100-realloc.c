@@ -26,7 +26,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	}
 	if (ptr == NULL)
 	{
-		newptr = malloc(new_size * sizeof(int));
+		newptr = malloc(new_size);
 		if (newptr == NULL)
 		{
 			free(ptr);
@@ -35,7 +35,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	}
 	if (new_size > old_size) /* #4 new > old added memory non initialized */
 	{
-		newptr = malloc(new_size * sizeof(int));
+		newptr = malloc(new_size);
 		if (newptr == '\0')
 		{
 			free(newptr);
