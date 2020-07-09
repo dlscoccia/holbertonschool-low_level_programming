@@ -7,11 +7,12 @@
  **/
 void *malloc_checked(unsigned int b)
 {
-	void *checker;
+	void *checker; /** not associated with any data types
+			*points to the address of variables **/
 
-	checker = malloc(b);
+	checker = malloc(b); /* allocate memory for variable b */
 	if (checker == NULL)
-		exit(98);
+		exit(98); /* address already in use */
 
 	return (checker);
 
