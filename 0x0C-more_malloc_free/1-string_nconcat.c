@@ -22,7 +22,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	strcon = malloc((len1 + n) * sizeof(char) + 1);
 	if (strcon == NULL)
-	{ return (NULL); }
+	{ free (strcon);
+		return (NULL); }
 
 	for (i = 0; i < len1; i++) /* copy s1 to new string strcon */
 	{
