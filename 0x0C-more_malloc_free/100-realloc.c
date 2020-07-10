@@ -10,11 +10,7 @@
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	void *newptr = NULL; /* p for new memory space */
-	unsigned int i = 0;
-	int *pnew, *pptr = NULL; /* pointer to int for newptr cast */
 
-	pptr = (int *)ptr; /* convert *void to *int */
-	pnew = (int *)newptr;
 
 	if (old_size == new_size) /* if #1 old = new */
 		return (ptr);
@@ -32,6 +28,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 			free(ptr);
 			return (NULL);
 		}
+		return (newptr);
 	}
 	if (new_size > old_size) /* #4 new > old added memory non initialized */
 	{
@@ -41,12 +38,8 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 			free(newptr);
 			return (NULL);
 		}
-		while (pptr[i] != '\0')
-		{
-			pnew[i] = pptr[i];
-			i++;
-		}
 		free(ptr);
-	}
+		return (newptr);
+}
 	return (newptr);
 }
