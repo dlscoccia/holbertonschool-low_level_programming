@@ -18,8 +18,7 @@ before entering into the actual coding (main () function).
 ```
 ###### What are the most common predefined macros
 
-[Predifened Macros in C]
-(https://gcc.gnu.org/onlinedocs/gcc-5.1.0/cpp/Standard-Predefined-Macros.html#Standard-Predefined-Macros)
+[Predifened Macros in C] (https://gcc.gnu.org/onlinedocs/gcc-5.1.0/cpp/Standard-Predefined-Macros.html#Standard-Predefined-Macros)
 
 ###### How to include guard your header files
 ```bash
