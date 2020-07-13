@@ -1,5 +1,5 @@
-#ifndef HOLB
-#define HOLB
+#ifndef _DOG_
+#define _DOG_
 
 /**
  * struct dog - Defines a new type dog
@@ -12,4 +12,6 @@ typedef struct dog
 	char *name;
 	float age;
 	char *owner;
-}
+} my_dog;
+
+#endif
