@@ -8,11 +8,10 @@
  **/
 void print_name(char *name, void (*f)(char *))
 {
-	void (*print_pointer)(char *);
+	void (*point)(char *);
 
-	if (name == '\0' || f == '\0')
+	if (name == NULL || f == NULL)
 		return;
-	print_pointer = f;
-
-	print_pointer(name);
+	point = f;
+	point(name);
 }
