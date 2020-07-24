@@ -6,18 +6,23 @@
  * Return: size of the list
  **/
 size_t print_list(const list_t *h)
-{
-	size_t len = 0;
-
-	while (h != NULL)
 	{
-		printf("[%d]", h->len);
-		if (h->str != NULL)
-			printf(" %s\n", h->str);
-		else
-			printf(" (nil)\n");
-		h = h->next;
-		len++;
+		size_t len;
+
+		if (h->str == NULL)
+			len = 0;
+		while (h != NULL)
+		{
+			/*	printf("[%d]", h->len); */
+
+			if (h->str != NULL)
+				printf("[%d] %s\n", h->len, h->str);
+			else
+
+				printf("[0] (nil)\n");
+			h = h->next;
+			len++;
+		}
+
+		return (len);
 	}
-	return (len);
-}
