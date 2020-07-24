@@ -4,7 +4,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+/**
+ * struct list_s - node struct
+ * @str: char pointer
+ * @len: int
+ * @next: pointer
+**/
 typedef struct list_s
 {
 	char *str;
