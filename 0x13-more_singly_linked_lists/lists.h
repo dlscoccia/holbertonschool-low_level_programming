@@ -2,11 +2,15 @@
 #define _LIST_
 #include <stdio.h>
 #include <stdlib.h>
-
+/**
+* struct listint_s - struct
+* @n: int
+* @next: pointer
+**/
 typedef struct listint_s
 {
-    int n;
-    struct listint_s *next;
+int n;
+struct listint_s *next;
 } listint_t;
 
 int _putchar(char c);
@@ -16,4 +20,4 @@ listint_t *add_nodeint(listint_t **head, const int n);
 listint_t *add_nodeint_end(listint_t **head, const int n);
 void free_listint(listint_t *head);
 
-#endif
+#endif /* _LISTS_  */
