@@ -1,38 +1,64 @@
 #include "lists.h"
+
 /**
- * insert_nodeint_at_index - inserts a node at index position
- * @head: pointer to pointer of head
- * @idx: index number
- * @n: value for n struct
- * Return: address of new node
- **/
+ * list_size - funtion for length elemnt
+ * @h: single list in
+ * Return: number of elemt in the linked lis
+ */
+
+int list_size(listint_t **h)
+{
+	listint_t *auxiliar;
+	int i = 0;
+
+	auxiliar = *h;
+	while (auxiliar != NULL)
+	{
+		i++;
+		auxiliar = auxiliar->next;
+	}
+	return (i);
+}
+
+/**
+ * insert_nodeint_at_index - insert new node in the index possition
+ * @head: linked list
+ * @idx: index, it start in 0
+ * @n: data for new node
+ * Return: Always addres new node
+ */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-listint_t *new_node, *last_node = *head;
-unsigned int iterator;
+unsigned int iterator = 0;
+unsigned int lenght = list_size(head);
+listint_t *auxiliar = *head;
+listint_t *new_node = NULL;
 
-if (head == NULL) /* checking for null list */
-return (NULL);
+if (head == NULL || idx > lenght)
+	return (NULL);
 
-new_node = malloc(sizeof(listint_t)); /* allocating memory for new_node */
-if (new_node == NULL) /* checking allocation */
-return (NULL);
+	new_node = malloc(sizeof(listint_t));
+if (new_node == NULL)
+	return (NULL);
 
-if (n == '\0') /* checking for n value to assign */
-new_node->n = 0;
-else
-new_node->n = n;
-
-for (iterator = 0; last_node != NULL; iterator++) /* iterates the list */
-{
-if (iterator == (idx - 1)) /* checking matches */
-{
-new_node->next = last_node->next;
-last_node->next = new_node;
-return (new_node);
-}
-else
-last_node = last_node->next;
-}
-return (NULL);
+	new_node->n = n; /* assing n(arg) to n(node) */
+	if (idx == 0) /* insert node at beggining */
+	{
+		new_node->next = *head;
+		*head = new_node;
+		return (new_node);
+	}
+	/* inserting at index */
+	while (auxiliar != NULL) /* iterates the list to find node(idx)*/
+	{
+		if (iterator == (idx - 1)) /* If matches, insert new node*/
+		{
+			new_node->next = auxiliar->next; /* new points to next of idx */
+			auxiliar->next = new_node; /* previous node points to new */
+			return (new_node); /*return address of new node allocated */
+		} /*                auxiliar -> new_node -> auxiliar next           */
+		auxiliar = auxiliar->next; /* If not match, move auxiliar */
+		iterator++;
+	}
+	return (NULL);
 }
