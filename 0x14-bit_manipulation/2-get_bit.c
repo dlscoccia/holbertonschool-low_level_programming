@@ -9,6 +9,8 @@ int get_bit(unsigned long int n, unsigned int index)
 {
 int nbit;
 
+if (index > 64)
+return (-1);
 /* Right shift num, n times and perform bitwise AND with 1 */
 nbit = (n >> index) & 1;
 return (nbit);
