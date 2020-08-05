@@ -17,7 +17,8 @@ if (ac != 3)
 exit(97); }
 
 fd1_open = open(argv[1], O_RDWR);
-fd2_open = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 00600);
+fd2_open = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR |
+S_IRGRP | S_IWGRP | S_IROTH);
 
 fd1_read = read(fd1_open, buffer, BUFFSIZE);
 if (fd1_open == -1)
