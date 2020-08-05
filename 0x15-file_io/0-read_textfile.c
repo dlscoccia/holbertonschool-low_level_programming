@@ -22,11 +22,13 @@ n_bytes = read(fd, buffer, letters);
 if (n_bytes == -1)
 return (0);
 
-free(buffer);
-close(fd);
+
 
 n_write = write(STDOUT_FILENO, buffer, n_bytes);
 if (n_write == -1)
+
+free(buffer);
+close(fd);
 return (0);
 
 return (n_bytes);
