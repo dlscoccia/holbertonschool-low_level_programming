@@ -13,7 +13,7 @@ int fd_open = 0, fd_write = 0, iterator = 0;
 if (filename == NULL)
 return (-1);
 
-fd_open = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 00400);
+fd_open = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 00600);
 if (fd_open == -1)
 return (-1);
 
