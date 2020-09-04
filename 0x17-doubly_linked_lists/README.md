@@ -1,5 +1,7 @@
-## What is a doubly-linked list:question:
+# What is a doubly-linked list:question:
+
 <img src=https://media.geeksforgeeks.org/wp-content/cdn-uploads/gq/2014/03/DLL1.png>
+
 A doubly linked list is a linked data structure that consists of a set of sequentially linked records called nodes. Each node contains two fields, called links, that are references to the previous and to the next node in the sequence of nodes. 
 The beginning and ending nodes’ previous and next links, respectively, point typically to null, to facilitate traversal of the list. 
 ``` bash
@@ -10,19 +12,25 @@ struct Node {
     struct Node* prev; // Pointer to previous node in DLL
 };
 ```
-## How to use:question:
+## How to use :question:
+
 #### Insert Data in the beginning :pushpin:
 The prev pointer of first node will always be NULL and next will point to front.
 If the node is inserted is the first node of the list then we make front and end point to this node.
 Else we only make front point to this node.
+
 <img src=https://www.studytonight.com/data-structures/images/doubly-linked-list-2.png>
+
 #### Insert Data in the end :pushpin:
 The next pointer of last node will always be NULL and prev will point to end.
 If the node is inserted is the first node of the list then we make front and end point to this node.
 Else we only make end point to this node.
+
 #### Insert Data before a Node :pushpin:
 Let’s say we are inserting node X before Y. Then X’s next pointer will point to Y and X’s prev pointer will point the node Y’s prev pointer is pointing. And Y’s prev pointer will now point to X. We need to make sure that if Y is the first node of list then after adding X we make front point to X.
+
 <img src=https://www.studytonight.com/data-structures/images/doubly-linked-list-3.png>
+
 #### Remove a Node :scissors:
 Removal of a node is quite easy in Doubly linked list but requires special handling if the node to be deleted is first or last element of the list. Unlike singly linked list where we require the previous node, here only the node to be deleted is needed. We simply make the next of the previous node point to next of current node (node to be deleted) and prev of next node point to prev of current node. Look code for more details.
  
