@@ -27,6 +27,7 @@ A hash function is any function that can be used to map data of arbitrary size t
 
 ![Hash Function](https://www.tutorialspoint.com/data_structures_algorithms/images/hash_function.jpg)
 
+> Using KeyVaLue % Size (of the array) you make sure that every value is in range
 ##### Hashing
 ```
 Hashing is a technique to convert a range of key values into a range of indexes of an array.
