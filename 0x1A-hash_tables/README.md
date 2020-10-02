@@ -16,6 +16,7 @@ A hash table organizes data so you can quickly look up values for a given key.
 
 #### Basic Operations
 Following are the basic primary operations of a hash table.
+
     • Search − Searches an element in a hash table.
     • Insert − inserts an element in a hash table.
     • delete − Deletes an element from a hash table.
@@ -23,12 +24,14 @@ Following are the basic primary operations of a hash table.
 #### What is a hash function
 
 A hash function is any function that can be used to map data of arbitrary size to fixed-size values. The values returned by a hash function are called hash values, hash codes, digests, or simply hashes. The values are used to index a fixed-size table called a hash table. Use of a hash function to index a hash table is called hashing or scatter storage addressing.
+
 ![Hash Function](https://www.tutorialspoint.com/data_structures_algorithms/images/hash_function.jpg)
+
 ##### Hashing
 ```
 Hashing is a technique to convert a range of key values into a range of indexes of an array.
 We're going to use modulo operator to get a range of key values. Consider an example of
-hash table of size 20, and the following items are to be stored. 
+hash table of size 20, and the following items are to be stored.
 Item are in the >>> (key,value) format.
 ```
 >>> perfect hash function: Function which, when applied to all the members of the set of items
@@ -37,12 +40,14 @@ to be stored in a hash table, produces a unique set of integers within some suit
 When a hash function maps two different keys to the same table address, a collision is said to occur.
 #### Handling the collisions
 In the small number of cases, where multiple keys map to the same integer, then elements with different keys may be stored in the same "slot" of the hash table. It is clear that when the hash function is used to locate a potential match, it will be necessary to compare the key of that element with the search key. But there may be more than one element which should be stored in a single slot of the table. Various techniques are used to manage this problem:
+
     1. chaining,
     2. overflow areas,
     3. re-hashing,
     4. using neighbouring slots (linear probing),
     5. quadratic probing,
     6. random probing, ...
+
 ###### Chaining
 One simple scheme is to chain all collisions in lists attached to the appropriate slot. This allows an unlimited number of collisions to be handled and doesn't require a priori knowledge of how many elements are contained in the collection. The tradeoff is the same as with linked lists versus array implementations of collections: linked list overhead in space and, to a lesser extent, in time.
 ###### Re-hashing
