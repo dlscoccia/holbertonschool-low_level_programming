@@ -21,7 +21,7 @@ size_t jump = sqrt(size);
 for (index = 0; index <= size; index += jump)
 {
 printf("Value checked array[%lu] = [%d]\n", index, array[index]);
-if ((index + jump) >= (size_t)value)
+if ((index + jump) >= value)
 {
 printf("Value found between indexes [%lu] and [%lu]\n", index, (index + jump));
 while (index <= (index + jump))
