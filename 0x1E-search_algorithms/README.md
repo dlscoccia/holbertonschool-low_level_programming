@@ -33,3 +33,6 @@ For example, If a function A() calls function B() inside it, then all th variabl
 
 - Data Space
 Amount of space used by the variables and constants.
+
+___
+source: geekforgeeks.com :top:
