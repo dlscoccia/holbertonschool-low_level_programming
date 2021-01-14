@@ -12,5 +12,6 @@ int interpolation_search(int *array, size_t size, int value);
 int exponential_search(int *array, size_t size, int value);
 
 /* Auxiliar Functions */
+void print_array(int *array, int left, int right);
 
 #endif /* SEARCH_ALGOS */
