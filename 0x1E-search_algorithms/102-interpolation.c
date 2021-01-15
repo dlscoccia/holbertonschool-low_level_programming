@@ -13,8 +13,7 @@ int low = 0, high = (size - 1);
 if (array == NULL)
 return (-1);
 
-int pos = low + (((double)(high - low) / (array[high] - array[low]))
-* (value - array[low]));
+int pos = low + (((double)(high - low) / (array[high] - array[low])) * (value - array[low]));
 if ((size_t)pos > size)
 printf("Value checked array[%d] is out of range\n", pos);
 while (low <= high && value >= array[low] && value <= array[high])
@@ -36,8 +35,7 @@ low = pos + 1;
 
 else
 high = pos - 1;
-pos = low + (((double)(high - low) / (array[high] - array[low]))
-* (value - array[low]));
+pos = low + (((double)(high - low) / (array[high] - array[low])) * (value - array[low]));
 }
 return (-1);
 }
